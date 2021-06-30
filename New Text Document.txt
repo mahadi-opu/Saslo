@@ -1,0 +1,680 @@
+@charset "UTF-8";
+/*----------------------------------------------------
+@File: Default Styles
+@Author:  Unikforce
+@URL: http://unikforce.com/
+
+This file contains the styling for the actual theme, this
+is the file you need to edit to change the look of the
+theme.
+---------------------------------------------------- */
+/*=====================================================================
+@Template Name: Saslo - Multi Blog  HTML Template
+@Author: Unikforce
+
+
+CSS Table of content:-
+
+1. Global Area 
+2. Header Section
+=====================================================================*/
+/*=========
+Font load
+===========*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+/*=========
+Color Code
+===========*/
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/*global area*/
+/*----------------------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #464647;
+  font-family: 'Poppins', sans-serif;
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  color: #ffffff;
+  background-color: #0795fe;
+}
+
+::-moz-selection {
+  color: #ffffff;
+  background-color: #0795fe;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.ul-li ul {
+  margin: 0;
+  padding: 0;
+}
+.ul-li ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.ul-li-block ul {
+  margin: 0;
+  padding: 0;
+}
+.ul-li-block ul li {
+  display: block;
+  list-style: none;
+}
+
+div#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background-color: #fff;
+  background: #fff url("../img/preloader.gif") no-repeat center center;
+}
+
+[data-background] {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.form-control:focus,
+button:visited,
+button.active,
+button:hover,
+button:focus,
+input:visited,
+input.active,
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus,
+a:hover,
+a:focus,
+a:visited,
+a.active,
+select,
+select:hover,
+select:focus,
+select:visited {
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.form-control {
+  box-shadow: none;
+}
+
+.relative-position {
+  position: relative;
+}
+
+.pera-content p {
+  margin-bottom: 0;
+}
+
+.headline h1,
+.headline h2,
+.headline h3,
+.headline h4,
+.headline h5,
+.headline h6 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+   font-family: 'Open Sans', sans-serif;
+  line-height: 28px;
+  color: #777777;
+  margin: 0px; 
+}
+  @media (max-width: 767px) {
+    p {
+      font-size: 15px; 
+    } 
+  }
+.background_overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/*---------------------------------------------------- */
+/*Saslo-btn*/
+/*----------------------------------------------------*/
+.saslo-btn {
+  border-radius: 7px;
+  width: 190px;
+  height: 54px;
+  line-height: 55px;
+  background-image: -moz-linear-gradient( -54deg, rgb(49,171,247) 0%, rgb(27,121,180) 100%);
+  background-image: -webkit-linear-gradient( -54deg, rgb(49,171,247) 0%, rgb(27,121,180) 100%);
+  background-image: -ms-linear-gradient( -54deg, rgb(49,171,247) 0%, rgb(27,121,180) 100%);
+}
+
+.saslo-btn a {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.saslo-header-btn a i {
+  margin-left: 20px;
+}
+
+/*--------------*/
+/*Saslo-scrollup*/
+/*--------------*/
+.scrollup {
+  width: 55px;
+  right: 20px;
+  z-index: 5;
+  height: 55px;
+  bottom: 20px;
+  display: none;
+  position: fixed;
+  border-radius: 100%;
+  line-height: 55px;
+  background-color: #0795fe;
+}
+.scrollup i {
+  color: #fff;
+}
+
+
+.can-section-title h2 {
+  color: #000;
+  float: right;
+  font-size: 60px;
+  font-weight: 700;
+  max-width: 240px;
+  text-align: right;
+  margin-right: 55px;
+}
+.can-section-title .title-tag {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0795fe;
+  padding: 0px 22px;
+  position: relative;
+}
+.can-section-title .title-tag i {
+  top: 0;
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #0795fe;
+}
+.can-section-title .title-tag i:nth-child(1) {
+  top: 5px;
+  left: 0;
+}
+.can-section-title .title-tag i:nth-child(2) {
+  top: 10px;
+  left: 0;
+}
+.can-section-title .title-tag i:nth-child(3) {
+  top: 5px;
+  left: 7px;
+}
+.can-section-title .title-tag i:nth-child(4) {
+  top: 10px;
+  left: 7px;
+}
+.can-section-title .title-tag i:nth-child(5) {
+  top: 5px;
+  right: 0px;
+}
+.can-section-title .title-tag i:nth-child(6) {
+  top: 10px;
+  right: 0;
+}
+.can-section-title .title-tag i:nth-child(7) {
+  top: 5px;
+  right: 7px;
+}
+.can-section-title .title-tag i:nth-child(8) {
+  top: 10px;
+  right: 7px;
+}
+.can-section-title p {
+  color: #747474;
+  max-width: 320px;
+  padding-top: 30px;
+  line-height: 1.867;
+}
+
+.section-title-2 span {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0795fe;
+  text-transform: uppercase;
+}
+.section-title-2 h2 {
+  color: #09141c;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-top: 20px;
+}
+
+
+/*---------------------------------------------------- */
+/*Navigation area*/
+/*----------------------------------------------------*/
+.navigation-main-area {
+  float: left;
+}
+.navigation-main-area li {
+  margin-left: 45px;
+}
+.navigation-main-area li a {
+  color: #343c55;
+  font-size: 16px;
+  font-weight: 400;
+
+  text-transform: uppercase;
+}
+.navigation-main-area li a:hover {
+  color: #0795fe;
+}
+.navigation-main-area .dropdown {
+  position: relative;
+}
+.navigation-main-area .dropdown:after {
+  top: 1px;
+  color: #fff;
+  right: -15px;
+  content: "+";
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  transition: 0.3s all ease-in-out;
+}
+.navigation-main-area .dropdown .dropdown-menu {
+  top: 65px;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  margin: 0px;
+  padding: 0px;
+  height: auto;
+  width: 200px;
+  border: none;
+  display: block;
+  border-radius: 0;
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+  background-clip: inherit;
+  background-color: #fff;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 5px 10px 0 rgba(83, 82, 82, 0.1);
+}
+.navigation-main-area .dropdown .dropdown-menu li {
+  width: 100%;
+  margin-left: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.navigation-main-area .dropdown .dropdown-menu li a {
+  width: 100%;
+  color: #343434;
+  display: block;
+  font-size: 14px;
+  padding: 10px 25px;
+  position: relative;
+  transition: 0.3s all ease-in-out;
+}
+.navigation-main-area .dropdown .dropdown-menu li a:before {
+  display: none;
+}
+.navigation-main-area .dropdown .dropdown-menu li a:hover {
+  background-color: #0795fe;
+  color: #fff;
+}
+.navigation-main-area .dropdown .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+.navigation-main-area .dropdown:hover .dropdown-menu {
+  top: 58px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/*---------------------------------------------------- */
+/*Header area*/
+/*----------------------------------------------------*/
+.header-type-one {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header-type-one .header-main-navigation-wrap {
+  padding: 47px 0px;
+}
+.header-type-one .navigation-main-area {
+  padding-top: 18px;
+}
+.header-type-one .saslo-header-btn{
+  border-radius: 7px;
+  width: 190px;
+  height: 54px;
+  line-height: 55px;
+  background-image: -moz-linear-gradient( -54deg, rgb(49,171,247) 0%, rgb(27,121,180) 100%);
+  background-image: -webkit-linear-gradient( -54deg, rgb(49,171,247) 0%, rgb(27,121,180) 100%);
+  background-image: -ms-linear-gradient( -54deg, rgb(49,171,247) 0%, rgb(27,121,180) 100%);
+}
+.header-type-one .saslo-header-btn a{
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/*Sticky */
+/*-------------------*/
+.saslo-main-header.sticky-on {
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  position: fixed;
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  animation-timing-function: ease;
+  transition: 0.3s all ease-in-out;
+  background-color: #000;
+  box-shadow: 0 3px 18px rgba(2, 21, 78, 0.09);
+}
+.saslo-main-header.sticky-on.header-type-one {
+  top: -48px;
+}
+.saslo-main-header.sticky-on.header-type-one .header-main-navigation-wrap {
+  border: none;
+  padding: 10px 0px;
+}
+.saslo-main-header.sticky-on.header-type-one .dropdown:hover .dropdown-menu {
+  top: 52px;
+}
+.saslo-main-header.sticky-on.header-type-two .can-brand-logo {
+  margin-top: 15px;
+}
+.saslo-main-header.sticky-on.header-type-two .header-cta-bottom {
+  display: none;
+}
+.saslo-main-header.sticky-on.header-type-three .header-bottom-area {
+  display: none;
+}
+/*Mobile Menu */
+/*-------------------*/
+.mobile_menu_content {
+  top: 0px;
+  bottom: 0;
+  left: -350px;
+  height: 100vh;
+  z-index: 101;
+  position: fixed;
+  width: 310px;
+  overflow-y: scroll;
+  background-color: #464647;
+  padding: 20px 35px 35px 35px;
+  box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.19);
+  transition: all 0.5s ease-in;
+}
+.mobile_menu_content .mobile-main-navigation {
+  width: 100%;
+}
+.mobile_menu_content .mobile-main-navigation .navbar-nav {
+  width: 100%;
+}
+.mobile_menu_content .dropdown:after {
+  display: none;
+}
+.mobile_menu_content .navbar-nav .dropdown-menu {
+  position: static !important;
+  transform: none !important;
+}
+.mobile_menu_content .mobile-main-navigation .navbar-nav li {
+  width: 100%;
+  display: block;
+  transition: 0.3s all ease-in-out;
+}
+.mobile_menu_content .mobile-main-navigation .navbar-nav li a {
+  padding: 0;
+  width: 100%;
+  color: #fff;
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  padding: 10px 30px 10px 0;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.17);
+}
+.mobile_menu_content .m-brand-logo {
+  width: 150px;
+  margin-bottom: 50px;
+}
+
+.mobile_menu_wrap.mobile_menu_on .mobile_menu_content {
+  left: 0px;
+  transition: all 0.7s ease-out;
+}
+
+.mobile_menu_overlay {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  right: 0%;
+  height: 120vh;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: all 0.5s ease-in-out;
+}
+
+.mobile_menu_overlay_on {
+  overflow: hidden;
+}
+
+.mobile_menu_wrap.mobile_menu_on .mobile_menu_overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile_menu_button {
+  right: 10px;
+  top: -30px;
+  z-index: 5;
+  color: #000;
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 0px;
+  position: absolute;
+  text-align: center;
+}
+.mobile_menu .mobile-main-navigation .navbar-nav li a:after {
+  display: none;
+}
+.mobile_menu .mobile-main-navigation .dropdown > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.mobile_menu .mobile_menu_content .mobile-main-navigation .navbar-nav .dropdown-menu {
+  border: none;
+  display: none;
+  transition: none;
+  box-shadow: none;
+  padding: 5px 0px;
+  width: 100%;
+  background-color: transparent;
+}
+.mobile_menu .mobile_menu_content .mobile-main-navigation .navbar-nav .dropdown-menu li {
+  border: none;
+  padding: 0 10px;
+  line-height: 1;
+}
+.mobile_menu .mobile_menu_content .mobile-main-navigation .navbar-nav .dropdown-menu li:hover {
+  background-color: transparent;
+}
+.mobile_menu .mobile_menu_content .mobile-main-navigation .navbar-nav .dropdown-menu li a {
+  color: #fff !important;
+}
+.mobile_menu .mobile_menu_content .mobile-main-navigation .navbar-nav .dropdown-menu li a:hover {
+  color: #0795fe;
+  background-color: transparent;
+}
+.mobile_menu .dropdown {
+  position: relative;
+}
+.mobile_menu .dropdown .dropdown-btn {
+  color: #9397a7;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  height: 30px;
+  padding: 5px 10px;
+}
+.mobile_menu .dropdown .dropdown-btn.toggle-open {
+  transform: rotate(90deg);
+}
+.mobile_menu .mobile_menu_close {
+  color: #d60606;
+  cursor: pointer;
+  top: 25px;
+  right: 25px;
+  font-size: 20px;
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------- */
+/*Responsive area*/
+/*----------------------------------------------------*/
+@media screen and (max-width: 1440px) {
+
+}
+@media screen and (max-width: 1280px) {
+  
+}
+@media screen and (max-width: 1024px) {
+ 
+}
+@media screen and (max-width: 991px) {
+  .mobile_menu_button {
+    display: block;
+  }
+
+  .header-type-one .navigation-main-area {
+    display: none;
+  }
+
+  .header-type-one .header-main-navigation-wrap {
+    padding: 10px 0px;
+  }
+
+  .header-type-one .can-brand-logo {
+    width: 130px;
+    margin-top: 4px;
+  }
+
+  .header-type-one .saslo-header-btn {
+   display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+
+}
+@media screen and (max-width: 680px) {
+
+}
+@media screen and (max-width: 480px) {
+
+}
+@media screen and (max-width: 380px) {
+ 
+}
+@media screen and (max-width: 320px) {
+
+}
+/*---------------------------------------------------- */
